@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RED 888 YT — Login</title>
+    <meta name="theme-color" content="#e50914" />
+    <meta name="description" content="Login to RED 888 YT" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div id="bg-animations" aria-hidden="true"></div>
+
+    <main class="auth-page" role="main">
+      <section class="auth-card" aria-labelledby="brand-heading">
+        <header class="brand">
+          <div class="brand-mark" aria-hidden="true">
+            <span class="pulse"></span>
+            <span class="glow"></span>
+          </div>
+          <div class="brand-text">
+            <h1 id="brand-heading" class="brand-title">
+              <span class="brand-red">RED</span>
+              <span class="brand-nums">888</span>
+              <span class="brand-yt">YT</span>
+            </h1>
+            <p class="brand-tag">Welcome back — sign in to continue</p>
+          </div>
+        </header>
+
+        <form id="login-form" class="form" autocomplete="on" novalidate>
+          <div class="field">
+            <label for="email">Email</label>
+            <div class="input-wrap">
+              <input id="email" name="email" type="email" inputmode="email" placeholder="you@example.com" required aria-required="true" />
+              <span class="focus-ring" aria-hidden="true"></span>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="password">Password</label>
+            <div class="input-wrap">
+              <input id="password" name="password" type="password" placeholder="••••••••" required aria-required="true" minlength="6" />
+              <button type="button" class="ghost toggle-password" aria-label="Toggle password visibility" title="Show/Hide password"></button>
+              <span class="focus-ring" aria-hidden="true"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label class="checkbox">
+              <input type="checkbox" name="remember" />
+              <span>Remember me</span>
+            </label>
+            <a href="#" class="link">Forgot password?</a>
+          </div>
+
+          <button type="submit" class="btn btn-primary">
+            <span class="btn-shine" aria-hidden="true"></span>
+            Sign in
+          </button>
+
+          <div class="divider" role="separator" aria-label="or continue with">
+            <span>or continue with</span>
+          </div>
+
+          <div class="providers">
+            <button type="button" class="btn btn-provider google" id="btn-google" aria-label="Continue with Google">
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="icon"><path fill="#EA4335" d="M12 10.2v3.9h5.5c-.2 1.3-1.7 3.9-5.5 3.9-3.3 0-6-2.7-6-6s2.7-6 6-6c1.9 0 3.2.8 4 1.6l2.7-2.7C16.8 3 14.6 2 12 2 6.5 2 2 6.5 2 12s4.5 10 10 10c5.8 0 9.6-4.1 9.6-9.9 0-.7-.1-1.2-.2-1.7H12z"/><path fill="#34A853" d="M3.2 7.6l3.2 2.4C7.5 7.6 9.6 6.1 12 6.1c1.9 0 3.2.8 4 1.6l2.7-2.7C16.8 3 14.6 2 12 2 8.1 2 4.8 4.2 3.2 7.6z"/><path fill="#4A90E2" d="M12 22c2.6 0 4.8-.9 6.4-2.4l-3-2.5c-.8.6-2 1-3.4 1-3.8 0-5.3-2.6-5.5-3.9H1.1C1.7 18.9 6.2 22 12 22z"/><path fill="#FBBC05" d="M20.4 12.1c0-.7-.1-1.2-.2-1.7H12v3.9h5.5c-.2 1.3-1.7 3.9-5.5 3.9-1.8 0-3.3-.6-4.4-1.6l-3.2 2.4C6.2 21.2 8.9 22 12 22c5.8 0 9.6-4.1 9.6-9.9z"/></svg>
+              Google
+            </button>
+            <button type="button" class="btn btn-provider facebook" id="btn-facebook" aria-label="Continue with Facebook">
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="icon"><path fill="#1877F2" d="M22 12.06C22 6.48 17.52 2 11.94 2S1.88 6.48 1.88 12.06C1.88 17.09 5.56 21.21 10.36 22v-7.03H7.69v-2.91h2.67V9.83c0-2.64 1.57-4.1 3.98-4.1 1.15 0 2.35.2 2.35.2v2.58h-1.32c-1.3 0-1.7.8-1.7 1.62v1.95h2.89l-.46 2.91h-2.43V22c4.8-.79 8.48-4.91 8.48-9.94z"/></svg>
+              Facebook
+            </button>
+            <button type="button" class="btn btn-provider gmail" id="btn-gmail" aria-label="Sign in with Gmail">
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="icon"><path fill="#EA4335" d="M12 12.713L2.4 5.25v12c0 .966.784 1.75 1.75 1.75H7V11.3l5 3.713 5-3.713v7.7h2.85c.966 0 1.75-.784 1.75-1.75v-12L12 12.713z"/><path fill="#34A853" d="M21.6 5.25v12c0 .966-.784 1.75-1.75 1.75H17V11.3l4.6-3.287z"/><path fill="#FBBC05" d="M2.4 5.25l9.6 7.463 9.6-7.463V4.25c0-.966-.784-1.75-1.75-1.75H4.15C3.184 2.5 2.4 3.284 2.4 4.25v1z"/><path fill="#4285F4" d="M7 19H4.15c-.966 0-1.75-.784-1.75-1.75v-12L7 8.7V19z"/></svg>
+              Gmail
+            </button>
+          </div>
+
+          <p class="fineprint">By continuing, you agree to our <a href="#" class="link">Terms</a> and <a href="#" class="link">Privacy</a>.</p>
+        </form>
+      </section>
+    </main>
+
+    <script defer src="./script.js"></script>
+  </body>
+  </html>
+
